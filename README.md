@@ -1,473 +1,490 @@
 <img width="1024" height="1536" alt="0695c51c-64f4-4536-b49a-db5685b136fe" src="https://github.com/user-attachments/assets/913872b3-8721-462a-93a3-8f0c613160d6" />
+# U.S. Veteran Benefits Guide
 
-# Veteran-Cheat-Codes-2026
-Veteran-Cheat-Codes-2026
+## Executive summary
 
+This README-style guide is an up-to-date, primary-source-first overview of major benefits available to U.S. military Veterans as of **June 28, 2026**. It focuses on two big buckets: **service-connected disability benefits** and **general Veteran benefits**. For disability, the most important thresholds are: **0%** establishes service connection but usually no monthly compensation; **10% to 20%** begins monthly compensation and generally places you in VA health care **Priority Group 3**; **30% to 40%** unlocks dependent pay and usually **Priority Group 2**; **50% and above** generally places you in **Priority Group 1** with the broadest no-copay health access; **60% or 70%/40%** may open the door to **TDIU** if service-connected conditions prevent substantially gainful employment; and **100%**, especially **100% permanent and total**, unlocks the largest set of derivative benefits for dependents, including **Chapter 35 DEA** and often **CHAMPVA**. VA’s current 2026 disability compensation rates are effective **December 1, 2025**. citeturn10view0turn27view0turn21search1turn37search0turn21search8
 
-Research Framework and Draft README Book for a National VA and State Veteran Benefits Repository
-Executive summary
-A strong 2026 edition of this project should not simply extend the reference repository’s topic-by-topic federal guide. It should become a federal-plus-state benefits atlas: a root README.md that works as the public-facing landing page, plus state modules for all 50 states and the District of Columbia, each linked from the main README and built from official state veterans affairs sources. That recommendation follows directly from the current reference repository’s structure, which already organizes content by major federal benefit area and explicitly says that state-specific benefits are not included. Your new project’s biggest value-add is to fill that gap in a way that remains maintainable and source-verifiable. 
+For general benefits, the core programs most Veterans should check are: **VA health care**, **disability compensation**, **Veterans Pension**, **GI Bill/education benefits**, **VA home loans**, **burial and memorial benefits**, and **employment assistance**. Some of the biggest recent changes are the ongoing implementation of the **PACT Act**, which expanded toxic-exposure-related care and compensation and accelerated health care access beginning **March 5, 2024**; implementation of the **Rudisill/Perkins** education decisions, which can allow some Veterans to receive up to **48 months** of education entitlement; new 2026-era claims tools such as the **Claim Assist Portal**; and a pending **August 1, 2026** cutoff for Chapter 35 secondary-school payments for programs starting on or after that date. citeturn12search0turn14search8turn14search4turn19search17turn37search6turn37search7
 
-Because the current date is June 21, 2026, the repository should be branded and maintained as a 2026 edition, even if you preserve “2025 version” as an alias, tag, or branch name for continuity. VA itself is currently publishing 2026 disability compensation rates effective December 1, 2025, and at least some states, such as Florida, are already publishing 2026 state veterans benefits guides. 
+The fastest practical path to benefits is usually: **file an Intent to File**, submit a complete claim with strong evidence, attend your C&P exam, add dependents once you hit 30% or higher, enroll in VA health care even if you think you have “small” ratings, and use a **VA-accredited representative** rather than paying an unaccredited “claims consultant.” VA-accredited VSO representatives provide free help on claims, evidence gathering, and decision reviews. citeturn15search0turn15search8turn19search1turn19search5turn20search9
 
-Your user’s meaning of “CVA” is unspecified. The safest editorial approach is to define the abbreviation near the top of the README as an assumption and use a glossary note such as: “In this repository, ‘CVA’ is treated as combat-related or combat-affected veteran benefits unless a source uses the term differently.” That matters because there are real, official combat-related benefit tracks—especially Combat-Related Special Compensation, presumptive toxic-exposure pathways under the PACT Act, combat-veteran health-care eligibility, and certain award-based or disability-based state benefits. 
+## Table of contents
 
-The most defensible content architecture is this: first, a federal section organized by eligibility tier and benefit family; second, a state index for all 50 states plus DC; third, one repeatable state template that forces the same fields for every jurisdiction: benefit category, eligibility, documents, forms, application path, contact point, deadlines, and source date. That is the only practical way to keep a national public repository accurate while using official sources as the backbone. NASDVA’s official directory confirms that every state and DC has an official veterans-affairs entry point, and NASDVA reports that states collectively contribute more than $6 billion annually in services to veterans and families. 
+- [Service-connected disability ratings](#service-connected-disability-ratings)
+  - [How ratings work](#how-ratings-work)
+  - [Base compensation table](#base-compensation-table)
+  - [Benefits by rating tier](#benefits-by-rating-tier)
+  - [Presumptive conditions cheat sheet](#presumptive-conditions-cheat-sheet)
+- [Core veteran benefits](#core-veteran-benefits)
+  - [VA health care](#va-health-care)
+  - [Education and GI Bill](#education-and-gi-bill)
+  - [VA home loan and housing grants](#va-home-loan-and-housing-grants)
+  - [Pension](#pension)
+  - [Burial and memorial benefits](#burial-and-memorial-benefits)
+  - [Employment and federal hiring](#employment-and-federal-hiring)
+  - [Social Security overlap](#social-security-overlap)
+- [Applications, forms, evidence, and timing](#applications-forms-evidence-and-timing)
+  - [Step-by-step disability claim playbook](#step-by-step-disability-claim-playbook)
+  - [Main forms and what they do](#main-forms-and-what-they-do)
+  - [Timelines and process flow](#timelines-and-process-flow)
+- [Appeals, reviews, pitfalls, and cheat codes](#appeals-reviews-pitfalls-and-cheat-codes)
+  - [Appeals lanes](#appeals-lanes)
+  - [Common pitfalls](#common-pitfalls)
+  - [Practical cheat codes](#practical-cheat-codes)
+- [State, local, and nonprofit help](#state-local-and-nonprofit-help)
+  - [What varies by state](#what-varies-by-state)
+  - [Official state veterans affairs portals](#official-state-veterans-affairs-portals)
+  - [Major nonprofit resources](#major-nonprofit-resources)
+- [Recent changes, source verification, and resources](#recent-changes-source-verification-and-resources)
+  - [Recent policy changes and effective dates](#recent-policy-changes-and-effective-dates)
+  - [Verification of sources](#verification-of-sources)
+  - [Prioritized resources and links](#prioritized-resources-and-links)
+  - [Open questions and limitations](#open-questions-and-limitations)
 
-What the repository should cover
-The federal benefits section should cover the families of benefits VA itself foregrounds: disability, health care, education and training, careers and employment, housing assistance, pensions, burial and memorials, and family-member benefits. VA’s own public framework, plus the reference repository’s existing topic layout, already supports that taxonomy. 
+## Service-connected disability ratings
 
-Within those families, the README should clearly distinguish basic veteran status benefits from service-connected disability benefits, severe-disability add-ons, and dependent/survivor programs. For example, some benefits depend mainly on qualifying service and discharge status, such as portions of VA health care, GI Bill eligibility, VA home loan eligibility, and burial eligibility. Other benefits begin only when VA assigns a disability rating, such as disability compensation starting at 10%, or tier upward based on severity, as with health-care priority groups, IU, dental care, CHAMPVA, and DEA eligibility. 
+### How ratings work
 
-A national repository also needs a document-and-forms backbone, because that is what makes it actionable for veterans, dependents, advocates, and service officers. The core federal form stack is stable enough to build around, and the state sections can mirror the same document logic. 
+A VA disability rating is the percentage VA assigns to a service-connected condition based on severity. VA uses that rating to determine **monthly tax-free disability compensation** and eligibility for many other benefits. If you have more than one service-connected condition, VA uses the **“whole person”** method rather than simple addition, and the combined result is then rounded to the nearest 10%. Under 38 C.F.R. § 4.25, a person who is 60% disabled is treated as 40% efficient before the next rating is applied; this is why **60% + 40% does not equal 100%**, but instead combines to **76%**, which rounds to **80%**. A bilateral factor can also apply in some paired-extremity cases under 38 C.F.R. § 4.26. citeturn11search12turn31search1turn31search2turn31search14
 
-Benefit family	Core form or tool	Primary use	Timing or deadline note	Official source
-Disability compensation	VA Form 21-526EZ	Initial or increased disability compensation claim	Pair with Intent to File if evidence is still being gathered	
-Health care	VA Form 10-10EZ	VA health care enrollment	VA says decisions are generally made in less than 1 week; hotline 877-222-8387	
-Veterans Pension	VA Form 21P-527EZ	Wartime Veterans Pension	Intent to File can preserve effective date; pension intake center listed on VA page	
-Aid and Attendance or Housebound	VA Form 21-2680 and sometimes 21-0779	Add-on to pension or survivor pension for care needs or housebound status	Nursing-home applicants also need 21-0779	
-Education benefits	VA Form 22-1990	Post-9/11 GI Bill, MGIB, MGIB-SR	Dependent transferees use 22-1990e	
-VR&E	VA Form 28-1900	Veteran Readiness and Employment	For veterans or service members with service-connected disability	
-Home loan COE	VA Form 26-1880	Request Certificate of Eligibility	VA’s current goal is about 5 business days for COE contact/decision	
-CHAMPVA	VA Form 10-10d	Dependents’ health coverage	Available to qualifying dependents and survivors who are not TRICARE-eligible	
-DIC and Survivors Pension	VA Form 21P-534EZ	Survivor claims, including DIC, Survivors Pension, accrued benefits	Related income and medical-expense forms may be needed	
-Supplemental Claim	VA Form 20-0995	Review with new and relevant evidence	Generally used within 1 year of the decision you disagree with	
-Higher-Level Review	VA Form 20-0996	Review based on the same record, no new evidence	Must generally be requested within 1 year	
-Board Appeal	VA Form 10182	Appeal to the Board of Veterans’ Appeals	Generally within 1 year; some contested claims use 60 days	
+A few examples make the math easier:
 
-A README-format book should also treat the following documents as recurring evidence objects across both federal and state sections: DD214 or equivalent separation document, VA rating decision letters, marriage certificates, divorce decrees, dependency records, medical nexus evidence, current diagnoses, direct-deposit information, and residency proof where a state benefit requires domicile. VA’s own health-care and disability pages, as well as state service-officer pages like Washington’s, repeatedly show those same records as the practical entry points for claims. 
+- **50% + 30%** → 50 leaves 50 efficiency; 30% of the remaining 50 is 15; total 65 → rounded to **70%**. citeturn31search2turn31search1
+- **70% + 20% + 10%** → 70 leaves 30 efficiency; 20% of 30 is 6, so 76; 10% of remaining 24 is 2.4, so 78.4 → rounded to **80%**. citeturn31search2turn31search1
+- **A 0% rating** still matters because it formally establishes service connection, which can support VA health access for the condition itself, future increases, secondary claims, and some derivative benefits. citeturn9view0turn26view0
 
-Federal benefit tiers and rating logic
-The federal section of the README should be written as a tiered decision tool, not just a long encyclopedia. That is more useful for advocates and service officers because it answers the question veterans actually ask: “What opens up at my service status or rating level?” The tiers below are a practical editorial model built from current VA eligibility and rates pages. 
+### Base compensation table
 
-Tier	What usually unlocks here	What to explain in README	Official source
-Basic veteran status	Potential VA health care eligibility, GI Bill pathways, home loan COE eligibility, burial eligibility, federal hiring preference in qualifying cases	Service requirements, discharge standards, DD214, benefit family overview	
-Service-connected 10% to 20%	Monthly tax-free disability compensation begins; health-care Priority Group 3 for 10% or 20%	Start of compensation, rates, evidence basics	
-Service-connected 30% to 40%	Higher compensation; dependent add-ons begin at 30%; health-care Priority Group 2 at 30% or 40%	Dependency rules, spouse/child rates, evidence of dependents	
-Service-connected 50% and up	Health-care Priority Group 1, generally no copays for covered care; significantly higher compensation	“No-copay” and priority-group explanation	
-Service-connected 70% and up	Potential Individual Unemployability if work is not possible; potential PCAFC eligibility if personal care needs and other requirements are met	Explain IU rules separately from schedular 100%; explain personal-care criteria	
-100% or paid at 100% through IU	Highest basic compensation tier; Class IV dental for 100% or IU; many states use 100% as a major threshold	Important distinction between schedular 100%, IU, and temporary ratings	
-100% permanent and total	May unlock CHAMPVA for dependents and DEA Chapter 35 for eligible spouses/children	Explain “P&T” explicitly because it matters more than the raw number in many family programs	
-Combat-related or special-condition tracks	CRSC, PACT Act presumptives, SMC, automobile allowance, clothing allowance, Aid and Attendance	Keep separate from ordinary rating tables so veterans do not miss parallel eligibility routes	
+The table below shows the **base monthly 2026 compensation rate for a Veteran alone, with no dependents**. For **30% and above**, dependent additions can increase the amount. VA’s current rate tables are effective **December 1, 2025**. citeturn10view0
 
-For a repository aimed at real-world use, the most important rating distinctions are not just monetary. They are threshold effects: dependents at 30%+, Priority Group 1 at 50%+, IU rules generally at 60% single or 70% combined with one disability at 40%, and family-health/family-education programs when VA has found the veteran permanent and total. If the README makes those thresholds visually obvious, it will be much more actionable than a plain narrative guide. 
+| Combined rating | Monthly compensation for Veteran alone |
+|---|---:|
+| 0% | $0.00 |
+| 10% | $180.42 |
+| 20% | $356.66 |
+| 30% | $552.47 |
+| 40% | $795.84 |
+| 50% | $1,132.90 |
+| 60% | $1,435.02 |
+| 70% | $1,808.45 |
+| 80% | $2,102.15 |
+| 90% | $2,362.30 |
+| 100% | $3,938.58 |
 
-Below is the recommended rating chart for the federal section. It uses current 2026 VA compensation figures for a veteran with no dependents. If the GitHub renderer in your target repo does not support xychart-beta, keep the fallback markdown table immediately below it. The figures themselves come from the current VA rate table. 
+**Important thresholds:** VA does **not** pay extra for dependents at **10% or 20%**. Extra dependent compensation starts at **30%**. At 30% and above, rates rise for spouses, children, dependent parents, and a spouse receiving Aid and Attendance. For example, the 2026 rate for a Veteran at **30% with a spouse and no children** is **$617.47**; at **70% with spouse, one child, and spouse Aid & Attendance**, the worked example on VA’s rate page totals **$2,367.45**. citeturn10view0
 
-2026 VA disability compensation for a veteran alone
-10
-20
-30
-50
-70
-100
-4000
-3500
-3000
-2500
-2000
-1500
-1000
-500
-0
-Monthly USD
+### Benefits by rating tier
 
+The most practical way to think about ratings is not just the payment, but the **benefits unlocked at each threshold**.
 
-Show code
-Disability rating	Monthly compensation for veteran alone
-10%	$180.42
-20%	$356.66
-30%	$552.47
-50%	$1,132.90
-70%	$1,808.45
-100%	$3,938.58
+| Rating tier | Core compensation effect | Health care access and cost-sharing | Major threshold benefits and notes |
+|---|---|---|---|
+| **0%** | Service connection established, but no monthly compensation | Noncompensable 0% Veterans may still receive care for their service-connected condition; exact enrollment/cost status depends on income and priority-group rules | Useful for future increases, secondary claims, and proving nexus. VA’s eligibility matrix notes possible no-cost care/prescriptions for service-connected disabilities if income limits are met, travel pay in some cases, and federal hiring preference issues. citeturn26view0turn9view0 |
+| **10%–20%** | First monthly compensation starts at $180.42 and $356.66 | Usually Priority Group 3; Veterans with 10% or higher service-connected ratings generally do not pay outpatient or inpatient copays; non-service-connected prescriptions may still have copays below 50% ratings | Eligible for monthly compensation, VA health care, travel pay for service-connected care, federal 10-point preference, and possible VR&E if there is a serious employment handicap. citeturn10view0turn27view0turn28view0turn9view0turn30view0turn7search6 |
+| **30%–40%** | Compensation rises sharply; dependent pay begins at 30% | Usually Priority Group 2; no outpatient/inpatient copays; medication copays may still apply depending on priority group and condition | You can add a dependent spouse, child, or parent; 30% or more disabled Veterans may qualify for special noncompetitive federal hiring authority; VR&E is often central here. citeturn10view0turn27view0turn15search1turn7search0turn30view0 |
+| **50%** | Base rate $1,132.90 for Veteran alone | Priority Group 1 begins at 50%; Veterans in Priority Group 1 do not pay medication copays | This is a major health-care threshold: strongest routine health access, no outpatient/inpatient copays, and no prescription copays. Military retirees may also begin meeting the disability threshold for concurrent receipt rules if other retirement criteria are met. citeturn10view0turn27view0turn28view1turn36view0 |
+| **60%** | Base rate $1,435.02 | Priority Group 1 | A key TDIU threshold if you have **one** service-connected disability at 60% and it prevents substantially gainful employment. citeturn10view0turn11search2turn21search8 |
+| **70%–90%** | High monthly compensation; dependent add-ons matter more | Priority Group 1 | Another key TDIU threshold: **70% combined with at least one disability at 40%** may qualify. If TDIU is granted and considered permanent, it can open benefits normally associated with total ratings, including DEA and CHAMPVA for eligible dependents. citeturn10view0turn11search2turn21search8turn9view0turn21search1turn37search0 |
+| **100%** | Base rate $3,938.58 | Priority Group 1 with full no-copay medical and prescription access; Class IV dental eligibility generally applies to 100% ratings and TDIU | Strongest direct benefit tier. If the rating is also **permanent and total**, dependents may qualify for **Chapter 35 DEA** and **CHAMPVA**; Veterans may also be eligible for additional survivor/family derivative benefits. Some Veterans with 100% plus another separate 60% may qualify for statutory housebound (SMC-S). citeturn10view0turn21search0turn9view0turn21search1turn37search0turn11search16 |
 
-The federal combat-related lane should also be broken out explicitly if you plan to keep the user’s “CVA” label. The best official anchor for that is Combat-Related Special Compensation: it is a tax-free payment for retired veterans with combat-related disabilities, requires at least a 10% VA rating, is applied for through the uniformed service rather than VA, and carries a 6-year statute of limitations on full back-pay protection. That is an important distinction and a good reason to keep “combat-related benefits” as a separate lane in the book. 
+A few nuances matter:
 
-State architecture and source backbone
-The state side of the repository should not try to mimic the federal section one-for-one. State benefits vary in three different ways at once: eligibility thresholds, benefit types, and administrative pathways. A veteran may qualify for a state property-tax exemption only at 100% permanent and total, for tuition relief based on state residency and service history, for hunting/fishing or park benefits at 60%, or for claims help regardless of rating. Official state pages from Oklahoma, Virginia, Washington, and Texas show exactly that kind of variation. 
+- VA treats **TDIU** as payment at the **100% rate**, but not every benefit attaches unless VA also finds the total disability **permanent**. For example, **DEA** and **CHAMPVA** generally hinge on **permanent and total** status, not merely a temporary total rating. citeturn11search0turn21search1turn37search0
+- Veterans rated **50% or more** or found unemployable due to service-connected disabilities are placed in **Priority Group 1** for VA health care. Veterans rated **30% or 40%** are **Priority Group 2**. Veterans rated **10% or 20%**, Purple Heart recipients, former POWs, and several others are **Priority Group 3**. Veterans receiving Aid and Attendance or Housebound benefits are **Priority Group 4**. Compensable 0% Veterans are in **Priority Group 6**. Noncompensable 0% Veterans may fall into income-based groups or remain ineligible for broad enrollment while still receiving care for the service-connected condition. citeturn27view0turn26view0
+- Veterans with **any compensable service-connected disability** may qualify for hearing aids or eyeglasses through VA if otherwise enrolled and receiving VA care. citeturn26view0
 
-That means every state page in the book should follow the same fixed fields:
+### Presumptive conditions cheat sheet
 
-Field	Why it matters
-Benefit category	Keeps cross-state comparison possible
-Eligibility trigger	Rating, P&T, wartime service, residency, discharge, medal, dependent status
-Required documents	DD214, VA award letter, residency proof, tax form, school proof, death certificate
-Application path	Online, mail, county assessor, school aid office, state veterans service office
-Required forms	State forms and any federal companion forms
-Contact point	State agency, local county office, school certifying official, tax office
-Deadlines	Filing dates, legislative effective dates, school term deadlines, annual renewals
-Official source and last verified date	Essential for public-repo trustworthiness
+A **presumptive condition** lowers the proof burden. Instead of proving both exposure and medical causation in the usual way, you usually need to prove the required **service/location/time window** and show you have the **listed condition**. citeturn33search5turn12search2
 
-The national source backbone is straightforward. NASDVA’s official resource page lists each state and D.C. official veterans-affairs entry point. That page should be the state index source in the national README, while each state subsection should then drill down into the state’s own official pages for the actual benefits and application instructions. 
-
-Official jurisdiction coverage checklist
-The directory below is the minimum state-coverage backbone your repository should include. Each jurisdiction listed here has an official state or district veterans-affairs portal linked from NASDVA’s official resource page. 
-
-Jurisdiction	README coverage status
-Alabama	Include dedicated state page
-Alaska	Include dedicated state page
-Arizona	Include dedicated state page
-Arkansas	Include dedicated state page
-California	Include dedicated state page
-Colorado	Include dedicated state page
-Connecticut	Include dedicated state page
-Delaware	Include dedicated state page
-District of Columbia	Include dedicated state page
-Florida	Include dedicated state page
-Georgia	Include dedicated state page
-Hawaii	Include dedicated state page
-Idaho	Include dedicated state page
-Illinois	Include dedicated state page
-Indiana	Include dedicated state page
-Iowa	Include dedicated state page
-Kansas	Include dedicated state page
-Kentucky	Include dedicated state page
-Louisiana	Include dedicated state page
-Maine	Include dedicated state page
-Maryland	Include dedicated state page
-Massachusetts	Include dedicated state page
-Michigan	Include dedicated state page
-Minnesota	Include dedicated state page
-Mississippi	Include dedicated state page
-Missouri	Include dedicated state page
-
-Jurisdiction	README coverage status
-Montana	Include dedicated state page
-Nebraska	Include dedicated state page
-Nevada	Include dedicated state page
-New Hampshire	Include dedicated state page
-New Jersey	Include dedicated state page
-New Mexico	Include dedicated state page
-New York	Include dedicated state page
-North Carolina	Include dedicated state page
-North Dakota	Include dedicated state page
-Ohio	Include dedicated state page
-Oklahoma	Include dedicated state page
-Oregon	Include dedicated state page
-Pennsylvania	Include dedicated state page
-Rhode Island	Include dedicated state page
-South Carolina	Include dedicated state page
-South Dakota	Include dedicated state page
-Tennessee	Include dedicated state page
-Texas	Include dedicated state page
-Utah	Include dedicated state page
-Vermont	Include dedicated state page
-Virginia	Include dedicated state page
-Washington	Include dedicated state page
-West Virginia	Include dedicated state page
-Wisconsin	Include dedicated state page
-Wyoming	Include dedicated state page
-
-Verified example-state comparison matrix
-A good national README should include at least one comparison table that shows how much states diverge. The table below is a verified starter matrix built from official state sources.
-
-State	Education benefit examples	Tax or fee benefit examples	Recreation or license examples	Claims/help infrastructure	Official source
-Texas	Hazlewood Act provides up to 150 hours of tuition exemption at public institutions for qualifying veterans, spouses, and dependents; schools have their own deadlines, and TVC notes a 60-day deferment option if verification paperwork is delayed	Not the best row for state tax detail in the source reviewed; use Hazlewood page plus Texas state tax sources in final state file	Not central on the source reviewed	School aid office plus Texas Veterans Commission education workflow	
-Oklahoma	ODVA benefits browser and state application form; strong claims-help orientation	Full homestead property-tax exemption for qualifying 100% permanent service-connected veterans; sales-tax exemption at the 100% rate; retirement benefit tax treatment	Free admission to state parks and museums for honorably discharged Oklahoma-resident veterans; hunting/fishing perks at 60%+ disability and some fee exemptions at 100%	ODVA offices in Oklahoma City and Muskogee; toll-free 888-655-2838	
-Virginia	Education pages include GI Bill support, a state approving agency, MEWI, and VMSDEP	Military retirement subtraction; real-estate tax exemption for 100% service-connected, permanent and total veterans and some surviving spouses; one-vehicle property-tax exemption for qualifying 100% P&T veterans	Hunting and fishing license page exists in DVS benefits structure	38 benefit service offices and free claims help through DVS	
-Washington	State site includes education and training pages in the benefits tree	“Free or Reduced Rate Passes & Tax Exemptions” are built into the state benefits taxonomy	Veterans benefits tree includes passes, tax exemptions, veteran ID and related assistance	WDVA service officers help with disability, pension, Aid and Attendance, health care, and other federal/state/county benefits; statewide contact 1-800-562-2308	
-
-This matrix points to an important editorial lesson: a national repository should compare states by benefit family and threshold, not by trying to force every state into identical statutory language. Texas is unusually strong in state tuition relief; Oklahoma’s pages highlight parks, licenses, and tax exemptions; Virginia’s official pages show how a state can combine tax relief with dense service-office infrastructure; Washington’s official site emphasizes service officers, claims assistance, spouse/family benefits, and a wide state-benefit menu. 
-
-A useful pattern for annual maintenance is visible in Florida. FDVA publishes a 2026 Florida Veterans’ Benefits Guide, which is exactly the kind of annual release cycle your repo should mirror with tagged updates and dated source checks. 
-
-Draft README outline and sample content
-The best way to build this for GitHub is to keep the root README readable, searchable, and navigable, while pushing state detail into predictable subsections or linked child markdown files. The sample below is not meant to be the entire finished book; it is a production-ready outline and starter content pattern.
-
-md
-Copy
-# Veteran Benefits Atlas
-> 2026 edition of a public GitHub reference for U.S. federal VA benefits and state-level veteran benefits in all 50 states and the District of Columbia.
-
-![Coverage](https://img.shields.io/badge/Coverage-50%20States%20%2B%20DC-blue)
-![Sources](https://img.shields.io/badge/Sources-Official%20VA%20and%20State%20Agencies-green)
-![Last Verified](https://img.shields.io/badge/Last%20Verified-2026--06--21-orange)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-
-## Executive Summary
-
-This repository helps veterans, dependents, survivors, advocates, and service officers find benefits by:
-- federal benefit family,
-- disability rating tier,
-- family status,
-- combat-related eligibility track,
-- and state of residence.
-
-> **Assumption note on "CVA":** This repository treats "CVA" as shorthand for combat-related or combat-affected veteran benefits unless an official source uses the abbreviation differently.
-
-## Table of Contents
-
-- [How to Use This Repository](#how-to-use-this-repository)
-- [Federal Benefits](#federal-benefits)
-  - [Eligibility Tiers](#eligibility-tiers)
-  - [Compensation and Pension](#compensation-and-pension)
-  - [Health Care](#health-care)
-  - [Education and Training](#education-and-training)
-  - [Housing and Home Loans](#housing-and-home-loans)
-  - [Employment and Transition](#employment-and-transition)
-  - [Dependents and Survivors](#dependents-and-survivors)
-  - [Burial and Memorial Benefits](#burial-and-memorial-benefits)
-  - [Appeals and Review Options](#appeals-and-review-options)
-- [State Benefits](#state-benefits)
-  - [State Index](#state-index)
-  - [Comparison Tables](#comparison-tables)
-- [Templates and Checklists](#templates-and-checklists)
-- [Maintenance Notes](#maintenance-notes)
-- [Sources](#sources)
-
-## How to Use This Repository
-
-1. Start with your **status**:
-   - Veteran
-   - Service member in transition
-   - Dependent
-   - Survivor
-   - Caregiver
-
-2. Then find your **federal tier**:
-   - Qualifying service only
-   - Service-connected 10%–20%
-   - Service-connected 30%–40%
-   - Service-connected 50%+
-   - Service-connected 70%+
-   - 100% / IU / Permanent & Total
-   - Combat-related / special compensation track
-
-3. Then open your **state page**.
-
-## Federal Benefits
-
-### Eligibility Tiers
-
-| Tier | Common unlocks | Typical evidence |
+| Presumptive category | Key qualifying service rule | Examples / notes |
 |---|---|---|
-| Qualifying service | VA health care, GI Bill pathways, home loan COE, burial benefits | DD214, service history |
-| 10%–20% | Monthly disability compensation | Rating decision |
-| 30%–40% | Dependent add-ons start | Dependency records |
-| 50%+ | Priority Group 1 health care, no copays for covered care | Rating decision |
-| 70%+ | Potential IU; possible caregiver-pathway relevance | Rating decision, work limits, care needs evidence |
-| 100% / IU | Highest payment tier, broad dental eligibility | Rating decision |
-| 100% P&T | CHAMPVA, DEA, many state tax/property triggers | P&T award letter |
+| **PACT Act toxic exposures / burn pits / particulate matter** | Qualifying service in specified locations and periods; health care expansion accelerated starting **March 5, 2024** | The PACT Act expanded health care and compensation for Veterans exposed to burn pits, Agent Orange, and other toxic substances. VA’s 2026 presumptive-service-connection fact sheet identifies many covered locations and conditions, including respiratory conditions such as asthma, chronic sinusitis, and rhinitis, among others. citeturn12search0turn32search7 |
+| **Agent Orange / herbicides** | Service in qualifying locations where VA presumes herbicide exposure | VA maintains official disease and exposure-location lists for Agent Orange and herbicides. citeturn12search1turn12search5turn32search10 |
+| **Camp Lejeune water contamination** | At least **30 cumulative days** at Camp Lejeune or MCAS New River between **August 1, 1953 and December 31, 1987** | VA recognizes **8 presumptive conditions** for compensation and **15 covered conditions** for certain health care copay relief. citeturn12search4turn12search8 |
+| **Gulf War undiagnosed illness / MUCMI** | Service in recognized Southwest Asia locations; chronic qualifying disability generally must be at least **10% disabling** | Official examples include chronic fatigue syndrome, fibromyalgia, functional gastrointestinal disorders, medically unexplained chronic multisymptom illness, and other undiagnosed illness symptoms. VA extended the presumptive period through **December 31, 2026**. citeturn32search8turn32search12 |
+| **Radiation-risk activities** | Participation in certain radiation-risk activities or qualifying exposure scenarios | VA recognizes specified cancers and other diseases linked to ionizing radiation exposure; survivors may also qualify for benefits. citeturn32search2turn32search11 |
+| **Chronic diseases appearing within one year of discharge** | Condition in 38 C.F.R. § 3.309(a) becomes at least **10% disabling within 1 year** after discharge | VA’s examples include hypertension, arthritis, diabetes, and peptic ulcers. citeturn33search3turn32search3 |
+| **ALS** | Diagnosis after service with **90 days or more continuous active service** | VA treats ALS as presumptively service connected under this rule. citeturn33search1turn33search11 |
+| **Former POW presumptives** | Former POW status plus listed condition, generally at least **10% disabling** after service | VA presumes a broad list of conditions for former POWs, including various nutritional, psychiatric, cardiovascular, and cold-injury-related conditions. citeturn33search2turn33search8 |
 
-### Disability Compensation Rate Snapshot
+## Core veteran benefits
+
+### VA health care
+
+VA health care is often underused. If you are eligible, it can cover primary care, specialty care, mental health, prescriptions, prosthetics, long-term care in some circumstances, urgent care, and community care when VA cannot furnish the needed service. VA also remains the **largest integrated health care system in the United States**. citeturn26view0turn24search8
+
+The fastest health care intake path is the **[Application for Health Benefits (VA Form 10-10EZ)](https://www.va.gov/forms/10-10ez/)**. Your rating affects your priority group and copays, but it is **not** the only path to eligibility: pension recipients, certain low-income Veterans, combat Veterans within enhanced eligibility windows, toxic-exposed Veterans, Camp Lejeune Veterans, World War II Veterans, and others may qualify as well. citeturn0search3turn26view0
+
+A few current high-value rules:
+
+- **Priority Group 1** includes Veterans rated **50%+**, Veterans determined unemployable due to service-connected disabilities, and Medal of Honor recipients. citeturn27view0
+- Veterans with **10%+ service-connected ratings** generally do **not** pay outpatient or inpatient copays. citeturn28view0
+- Veterans in **Priority Group 1** do **not** pay medication copays; Priority Groups 2–8 generally do, with 2026 outpatient medication copays of **$5 / $8 / $11** for 30-day supplies by tier and an annual cap of **$700**. citeturn28view1turn28view2
+- VA urgent care in the community generally requires that you be **enrolled** and have received care from VA or a community provider within the last **24 months**; **no preauthorization is required** for covered urgent care. citeturn28view0turn28view3
+- For emergency community care, VA says Veterans should seek care immediately, and for in-network emergency care VA should be notified within **72 hours** of the start of care. citeturn28view0
+
+For dental, eligibility is much narrower than regular medical coverage. Veterans with certain service-connected dental conditions, some former POWs, and generally Veterans rated **100%** or paid at the **TDIU** rate can qualify for comprehensive VA dental care. Veterans who do not qualify for direct dental care may still buy subsidized private dental coverage through **VADIP**. citeturn21search0turn21search2turn21search12
+
+### Education and GI Bill
+
+The top education programs for most Veterans are the **Post-9/11 GI Bill (Chapter 33)**, **Montgomery GI Bill Active Duty (Chapter 30)**, **Montgomery GI Bill Selected Reserve (Chapter 1606)**, **VR&E (Chapter 31)**, and for dependents, **DEA (Chapter 35)**. VA’s education portal remains the best first stop. citeturn22view1turn29view0turn37search0
+
+For the **Post-9/11 GI Bill**, VA pays at 100% of the full rate if you served at least **36 months** on active duty, received a **Purple Heart** on or after September 11, 2001, or served at least **30 continuous days** and were discharged for a service-connected disability. Lower service lengths fall into 90% / 80% / 70% / 60% / 50% tiers. For the academic year **August 1, 2025 to July 31, 2026**, VA pays full net tuition and fees at public schools, up to **$29,920.95** at private schools, up to **$1,169 monthly housing allowance** for online-only learning at the maximum online rate, and up to **$1,000 a year** for books and supplies. citeturn22view0
+
+The **Rudisill** Supreme Court decision and VA’s later **Rudisill/Perkins** implementation are especially important if you had **2 or more qualifying periods of active duty** and eligibility under both **MGIB-AD** and the **Post-9/11 GI Bill**. VA now says some Veterans may qualify for **up to 48 months** of combined entitlement, and as of 2026 it is automating many reviews so Veterans no longer need to affirmatively request a Rudisill review in the same way they once did. citeturn14search1turn22view1turn14search0turn14search4
+
+For family members, **DEA (Chapter 35)** can help the spouse or child of a Veteran who died, is missing/captured, or is **permanently and totally disabled** due to a service-connected disability. A notable near-term change: VA says **Chapter 35 secondary education** benefits are no longer allowed for any program **starting on or after August 1, 2026**, because of a statutory change in the definition of educational institution. citeturn37search0turn37search6turn37search7
+
+The standard initial application for most Veteran education benefits is **[VA Form 22-1990](https://www.va.gov/forms/22-1990/)**, while dependents applying for Chapter 35 DEA or Fry Scholarship generally use **[VA Form 22-5490](https://www.va.gov/forms/22-5490/)**. Once approved, your school must certify enrollment before payment begins. citeturn3search23turn37search9turn37search19
+
+### VA home loan and housing grants
+
+VA-backed home loans remain one of the most valuable Veteran benefits because they often allow **no down payment**, **no monthly private mortgage insurance**, and terms that are often more favorable than conventional lending. VA reports that **nearly 90%** of VA-backed loans are made with no down payment, and if you have full entitlement there is no VA loan limit, subject to lender underwriting. citeturn23search0turn23search12turn23search16
+
+The gateway document is the **Certificate of Eligibility**, usually requested online, through a lender, or by using **[VA Form 26-1880](https://www.va.gov/forms/26-1880/)**. Veterans with service-connected disability compensation are generally exempt from the **VA funding fee**, and if compensation is later awarded with an effective date **before loan closing**, a refund may be available. citeturn23search15turn23search11turn8search0turn8search3
+
+For certain severely disabled Veterans, housing grants may matter even more than the loan itself. VA’s adapted housing programs include **SAH**, **SHA**, and **TRA** grants. For FY 2026, VA says a qualifying Veteran can receive a **TRA** grant of up to **$50,961** if eligible under SAH rules, or up to **$9,100** if eligible under SHA rules. The standard application is **[VA Form 26-4555](https://www.va.gov/forms/26-4555/)**. citeturn23search1turn23search5turn23search9
+
+Native American Veterans should also check the **Native American Direct Loan (NADL)** program, which can help finance a home on federal trust land if the Veteran or spouse meets program criteria and the tribe participates in the program. citeturn23search2turn23search6
+
+### Pension
+
+**Veterans Pension** is distinct from disability compensation. It is a **needs-based** monthly payment for wartime Veterans who meet age/disability rules and who are within income and net-worth limits. To qualify, the Veteran generally must not have a dishonorable discharge, must have qualifying wartime service, and must be **65+**, permanently and totally disabled, in a nursing home for long-term care because of disability, or receiving **SSDI** or **SSI**. citeturn38view1
+
+As of the current rate year, the pension **net worth limit** from **December 1, 2025 to November 30, 2026** is **$163,699**. The current MAPR tables effective **December 1, 2025** include:
+- **$17,441** for a Veteran with no dependents,
+- **$22,839** for a Veteran with 1 dependent,
+- **$29,093** for a Veteran with no dependents and Aid & Attendance,
+- **$34,488** for a Veteran with 1 dependent and Aid & Attendance. citeturn39view0
+
+VA also applies a **3-year look-back period** for certain asset transfers for less than fair market value, with a penalty period that can extend up to **5 years**. The main application is **[VA Form 21P-527EZ](https://www.va.gov/forms/21p-527ez/)**. citeturn39view0turn15search19
+
+### Burial and memorial benefits
+
+VA burial and memorial benefits include **national cemetery burial eligibility**, **burial allowances**, **headstones/markers**, **medallions**, and **burial flags**. The pre-need cemetery determination form is **[VA Form 40-10007](https://www.va.gov/forms/40-10007/)**, and the burial allowance application is **[VA Form 21P-530EZ](https://www.va.gov/forms/21p-530ez/)**. citeturn4search12turn5search18turn5search12
+
+Current burial allowance figures depend heavily on whether the death was **service-connected** and on the circumstances of death and burial. VA’s compensation site states that for **non-service-connected** deaths on or after **October 1, 2024**, VA will pay up to **$978** toward burial and funeral expenses and **$978** for plot or interment if the Veteran is not buried in a national cemetery. The official application page explains that claims based on non-service-connected death usually must be filed within **2 years** after burial or cremation, while some burial claims have **no time limit**. citeturn5search2turn5search0turn5search12
+
+If the Veteran wants certainty in advance, the safest move is to obtain pre-need cemetery eligibility early. That prevents avoidable delays at a difficult time. citeturn4search12turn5search10
+
+### Employment and federal hiring
+
+Veterans often overlook the interaction between VA benefits, federal hiring preference, and state workforce systems. For federal jobs, OPM says disabled Veterans may receive **10-point preference**, and a **30% or more disabled Veteran** appointment is a special hiring authority that can allow agencies to appoint eligible Veterans without issuing a vacancy announcement in the usual way. citeturn7search6turn7search0
+
+VA’s own employment resources point Veterans to career counseling, job-search help, small-business support, and **VR&E**. Through the Department of Labor, **Jobs for Veterans State Grants** fund specialist staff in state systems, including **DVOP** specialists and **LVER** staff, and DOL says most American Job Centers have veterans-specific staff who can help. citeturn25search2turn25search1turn25search16
+
+For disabled Veterans specifically, **VR&E** can be one of the most valuable programs in the entire system. Veterans can apply with at least a **10% service-connected rating** and a qualifying discharge character. For Veterans discharged on or after **January 1, 2013**, the old 12-year basic eligibility limit no longer applies. VR&E services can include evaluation, counseling, resume help, accommodations, OJT, apprenticeships, postsecondary training, and independent living services. Importantly, using VR&E generally does **not** deduct from GI Bill entitlement; instead, VA may sometimes restore prior education entitlement through **retroactive induction**. citeturn30view0
+
+### Social Security overlap
+
+VA disability and Social Security disability are separate systems. **SSDI and VA disability compensation do not offset each other**, so a Veteran may receive both if separately eligible. **SSI**, by contrast, is income- and resource-tested, and SSA policy treats VA compensation or pension as **unearned income** for SSI purposes. SSA also offers **expedited disability processing** for wounded warriors and for Veterans who are **100% permanent and total**, although a VA rating still does not guarantee SSDI approval. citeturn6search0turn6search3turn6search4turn6search15
+
+## Applications, forms, evidence, and timing
+
+### Step-by-step disability claim playbook
+
+The standard initial disability claim is usually **[VA Form 21-526EZ](https://www.va.gov/forms/21-526ez/)**. The strongest claims usually follow the same pattern:
+
+1. **File an Intent to File first** using **[VA Form 21-0966](https://www.va.gov/forms/21-0966/)** if you are not ready to submit the full claim that day. If VA later grants the claim, this can preserve an earlier effective date and retro pay window. citeturn15search0turn15search8  
+2. **Build the three basic elements** of service connection: a current diagnosis, an in-service event/exposure/stressor, and a nexus between the two. Presumptive claims reduce the nexus burden. citeturn11search22turn33search5turn12search2  
+3. **Collect evidence**: DD-214 or service records, private and VA medical records, line-of-duty or deployment records if relevant, and lay evidence. Use **[VA Form 21-10210](https://www.va.gov/forms/21-10210/)** for a lay or buddy statement. Use **[VA Form 21-0781](https://www.va.gov/forms/21-0781/)** for PTSD and other mental health claims related to an in-service traumatic event. citeturn15search3turn15search2turn15search10turn15search17  
+4. **Submit the claim** online, by mail, by fax, or through an accredited representative. VA explicitly recommends the use of accredited attorneys, claims agents, or VSO representatives, and VSO representative services are free on benefit claims. citeturn19search1turn19search5turn19search15  
+5. **Attend the C&P exam** if VA schedules one. Missing it is one of the easiest ways to derail a claim. VA notes that contractor exams can generally be rescheduled only once and within a narrow window. citeturn20search9  
+6. **Watch for development letters or Claim Assist Portal requests**. In 2026, VA launched the Claim Assist Portal to make it easier to respond when VA needs more information. citeturn19search17  
+7. **Read the rating decision for more than the percentage.** Check the effective date, whether each issue was granted or denied, whether dependents were added, whether VA recognized toxic exposure, and whether your total rating is characterized as **permanent and total**. citeturn20search14turn37search0turn21search1  
+
+If you are still on active duty and have a known separation date, the **BDD program** can be a major advantage. You may file between **180 and 90 days before separation**, and VA says you must be available for exams within **45 days** of filing. citeturn20search18turn33search20
+
+### Main forms and what they do
+
+Here are the forms that matter most in practice for Veterans and their families:
+
+| Benefit area | Form | Official purpose |
+|---|---|---|
+| Disability compensation | [VA Form 21-526EZ](https://www.va.gov/forms/21-526ez/) | Initial disability compensation claim |
+| Intent to file | [VA Form 21-0966](https://www.va.gov/forms/21-0966/) | Preserves effective date while you gather evidence |
+| Lay evidence | [VA Form 21-10210](https://www.va.gov/forms/21-10210/) | Buddy/lay witness statement |
+| PTSD / traumatic event evidence | [VA Form 21-0781](https://www.va.gov/forms/21-0781/) | Statement in support of claimed mental health disorder(s) due to in-service traumatic event(s) |
+| TDIU | [VA Form 21-8940](https://www.va.gov/forms/21-8940/) | Increased compensation based on unemployability |
+| Add or remove dependents | [VA Form 21-686c](https://www.va.gov/forms/21-686c/) | Add spouse, children, parents, or remove dependents |
+| School-age dependent update | [VA Form 21-674](https://www.va.gov/forms/21-674/) | Continue benefits for child 18–23 attending school |
+| VA health care | [VA Form 10-10EZ](https://www.va.gov/forms/10-10ez/) | Apply for VA health care |
+| Caregiver support | [VA Form 10-10CG](https://www.va.gov/family-and-caregiver-benefits/caregiver-assistance/apply-form-10-10cg/introduction) | Joint application for the Program of Comprehensive Assistance for Family Caregivers |
+| CHAMPVA | [VA Form 10-10d](https://www.va.gov/forms/10-10d/) | Application for CHAMPVA benefits |
+| Pension | [VA Form 21P-527EZ](https://www.va.gov/forms/21p-527ez/) | Veterans Pension application |
+| GI Bill / education | [VA Form 22-1990](https://www.va.gov/forms/22-1990/) | Veteran education benefits application |
+| DEA / Fry for dependents | [VA Form 22-5490](https://www.va.gov/forms/22-5490/) | Dependents’ application for VA education benefits |
+| Home loan COE | [VA Form 26-1880](https://www.va.gov/forms/26-1880/) | Request Certificate of Eligibility |
+| Adapted housing | [VA Form 26-4555](https://www.va.gov/forms/26-4555/) | SAH/SHA grant application |
+| Burial allowance | [VA Form 21P-530EZ](https://www.va.gov/forms/21p-530ez/) | Burial benefit application |
+| National cemetery pre-need | [VA Form 40-10007](https://www.va.gov/forms/40-10007/) | Pre-need burial eligibility determination |
+| Supplemental Claim | [VA Form 20-0995](https://www.va.gov/forms/20-0995/) | Review lane with new and relevant evidence |
+| Higher-Level Review | [VA Form 20-0996](https://www.va.gov/forms/20-0996/) | Senior reviewer, no new evidence |
+| Board Appeal | [VA Form 10182](https://www.va.gov/decision-reviews/board-appeal/) | Appeal to Board of Veterans’ Appeals |
+
+These official form pages are all current on VA.gov and, in most cases, permit online filing in addition to mail or other options. citeturn2search0turn15search0turn15search3turn15search2turn11search6turn15search1turn15search16turn2search7turn34view0turn21search7turn15search19turn3search23turn37search9turn23search15turn23search9turn5search18turn4search12turn20search4turn19search13turn20search10
+
+### Timelines and process flow
+
+VA’s current live claims pages now publish average completion times. As of the most recent data cited by VA:
+- initial disability claims averaged **69.8 days** in **May 2026**,
+- Supplemental Claims for disability compensation or pension averaged **56 days** in **May 2026**,
+- VA’s target averages remain **125 days** for Supplemental Claims and HLRs, and **365 days** for Direct Review Board appeals. citeturn20search0turn20search4turn20search8
+
+If VA grants at least a **10%** rating, VA says the first payment should usually arrive within **15 days** of the decision notice. citeturn20search5
 
 ```mermaid
-xychart-beta
-    title "2026 VA disability compensation for a veteran alone"
-    x-axis [10, 20, 30, 50, 70, 100]
-    y-axis "Monthly USD" 0 --> 4200
-    bar [180.42, 356.66, 552.47, 1132.90, 1808.45, 3938.58]
-Rating	Monthly compensation
-10%	$180.42
-20%	$356.66
-30%	$552.47
-50%	$1,132.90
-70%	$1,808.45
-100%	$3,938.58
+flowchart TD
+    A[Intent to File] --> B[Gather evidence]
+    B --> C[File claim on VA Form 21-526EZ]
+    C --> D[VA initial review]
+    D --> E[Evidence requests or Claim Assist Portal]
+    D --> F[C&P exam if needed]
+    E --> G[Rating decision]
+    F --> G
+    G --> H[Payment and effective date]
+    G --> I[Add dependents if 30%+]
+    G --> J[Request review within 1 year if you disagree]
+```
 
-Core Federal Applications
-Benefit	Form	Apply
-Disability compensation	VA Form 21-526EZ	Official VA form page
-VA health care	VA Form 10-10EZ	Official VA form page
-Pension	VA Form 21P-527EZ	Official VA form page
-GI Bill / education	VA Form 22-1990	Official VA form page
-VR&E	VA Form 28-1900	Official VA form page
-Home loan COE	VA Form 26-1880	Official VA form page
-CHAMPVA	VA Form 10-10d	Official VA form page
-DIC / Survivors Pension	VA Form 21P-534EZ	Official VA form page
+For VA health care and other benefits, the timeline is more variable. Health care enrollment can be fast, but copay status and priority-group placement depend on rating, income, and other eligibility factors. GI Bill timelines depend heavily on school certification, and home-loan timelines are driven mostly by lender underwriting and closing workflows after you secure the COE. citeturn26view0turn37search19turn23search19
 
-Appeals and Review Options
-Disability
+## Appeals, reviews, pitfalls, and cheat codes
 
-Health care
+### Appeals lanes
 
-Pension
+Under the modernized system, most VA benefit disagreements follow three review lanes: **Supplemental Claim**, **Higher-Level Review**, or **Board Appeal**. In nearly all cases, you should act within **1 year** of the decision letter if you want to preserve the original effective date. citeturn20search6turn20search10turn20search19
 
-Education
+- **Supplemental Claim** is the best choice when you have **new and relevant evidence** that VA did not previously review. VA’s current average for disability compensation or pension Supplemental Claims was **56 days** in May 2026. Use **[VA Form 20-0995](https://www.va.gov/forms/20-0995/)**. citeturn20search4  
+- **Higher-Level Review** is the best choice when you believe VA made a legal or factual error **based on the evidence already in the file**. You cannot add new evidence. Use **[VA Form 20-0996](https://www.va.gov/forms/20-0996/)**. citeturn19search13turn20search8  
+- **Board Appeal** is the best choice when you want review by a Veterans Law Judge. The Board offers direct review, evidence submission, and hearing dockets. Evidence Submission allows additional evidence within **90 days**. Use **[VA Form 10182](https://www.va.gov/decision-reviews/board-appeal/)**. citeturn20search10turn20search11  
 
-CHAMPVA
+```mermaid
+flowchart TD
+    A[You receive a VA decision] --> B{Do you have new and relevant evidence?}
+    B -- Yes --> C[Supplemental Claim]
+    B -- No --> D{Do you want a senior reviewer to re-check the same record?}
+    D -- Yes --> E[Higher-Level Review]
+    D -- No --> F[Board Appeal]
+    F --> G[Direct Review]
+    F --> H[Evidence Submission]
+    F --> I[Hearing]
+```
 
-Yes
+### Common pitfalls
 
-Need review on same record
+The most common claim mistakes are surprisingly ordinary: filing weak evidence, missing C&P exams, failing to claim all secondary conditions, forgetting to add dependents after a 30%+ award, misunderstanding combined ratings, and using non-accredited paid claim companies instead of accredited representatives. VA explicitly says accredited VSO representatives can gather evidence, file claims, request decision reviews, and communicate with VA on your behalf for free. citeturn19search5turn20search9turn15search1turn31search1
 
-Have new and relevant evidence
+Other high-impact pitfalls include:
+- **Not preserving the effective date** with an Intent to File. citeturn15search8turn20search14
+- **Assuming 100% and 100% P&T are the same.** They are not. Many family benefits hinge on **permanent and total** status. citeturn21search1turn37search0
+- **Assuming a 0% rating is worthless.** It can be the foundation for later increases, secondary service connection, and service-connected treatment access. citeturn9view0turn26view0
+- **Ignoring private records.** VA’s caregiver and benefits pages repeatedly note that non-VA records can matter, and lay/witness evidence is also formal evidence. citeturn34view0turn15search3
+- **Not notifying VA after community emergency care** or missing deadlines on burial or appeal matters. citeturn28view0turn5search12turn20search10
 
-Want Veterans Law Judge review
+### Practical cheat codes
 
-Gather evidence and documents
+Here are the highest-value moves, the ones that routinely change outcomes:
 
-Which benefit?
+| Cheat code | Why it matters |
+|---|---|
+| **File an Intent to File before you do anything else** | Preserves an earlier effective date and can materially increase retro pay if the claim is later granted. citeturn15search8turn20search14 |
+| **Use BDD if you are 180–90 days from separation** | This is usually the fastest path for separating service members and helps line up exams before discharge. citeturn20search18 |
+| **Add dependents immediately if you hit 30% or more** | Extra dependent compensation starts at 30%, not before. Use 21-686c and 21-674 when needed. citeturn10view0turn15search1turn15search16 |
+| **If you cannot work, check TDIU even if you are not at 100%** | TDIU pays at the 100% rate if you meet schedular or extraschedular standards. citeturn11search2turn11search0 |
+| **Enroll in VA health care even at low ratings or 0%** | Ratings are not the only eligibility path. Toxic exposure, low income, pension, combat service, and other categories can still qualify you. citeturn26view0 |
+| **Use accredited reps, not paid “claim sharks”** | VA-accredited VSO help is free for claims, and VA provides official search tools. citeturn19search1turn19search5turn19search9 |
+| **Ask whether your total rating is permanent** | DEA and CHAMPVA for dependents usually turn on P&T status. citeturn21search1turn37search0 |
+| **If you are retired military and 50%+ VA-rated, ask about CRDP/CRSC** | Concurrent compensation rules can restore some or all retired pay, but the rules are technical. citeturn36view0turn36view1 |
+| **If buying a house, check funding-fee waiver/refund** | Service-connected compensation can waive the VA funding fee, and retroactive awards can trigger refunds. citeturn8search0turn8search3 |
+| **For pension, track unreimbursed medical expenses** | Deductible expenses can reduce countable income and increase eligibility/payment. citeturn39view0 |
 
-File VA Form 21-526EZ
+## State, local, and nonprofit help
 
-File VA Form 10-10EZ
+### What varies by state
 
-File VA Form 21P-527EZ
+State and local benefits are real, sometimes substantial, and often poorly advertised. But they vary dramatically by jurisdiction and frequently depend on **residency**, **rating level**, **P&T status**, **combat service**, **wartime service**, **income**, **property ownership**, or whether you are a **surviving spouse**. Across states, the most common benefit families are:
+- property-tax relief or assessment exemptions,
+- tuition waivers or scholarships,
+- employment preference and licensing help,
+- state veterans homes and cemeteries,
+- free or reduced vehicle registration / plates,
+- hunting and fishing license benefits,
+- emergency financial assistance and county veteran service offices. citeturn16search2turn16search4turn16search9
 
-File VA Form 22-1990
+The cleanest way to stay accurate is to use the official state veterans affairs portal for your jurisdiction and then drill down into the exact benefit category. The table below is a state-by-state portal directory compiled from the NASDVA official resources page, which links each state or district veterans affairs agency. Because state programs change often, treat the portal itself as the source of truth for current rules. citeturn17view0
 
-File VA Form 10-10d
+### Official state veterans affairs portals
 
-VA review and exams if needed
+| Jurisdiction | Official portal |
+|---|---|
+| Alabama | [Alabama Department of Veterans Affairs](https://va.alabama.gov) |
+| Alaska | [Alaska Office of Veterans Affairs](https://veterans.alaska.gov) |
+| Arizona | [Arizona Department of Veterans’ Services](https://dvs.az.gov) |
+| Arkansas | [Arkansas Department of Veterans Affairs](https://www.veterans.arkansas.gov) |
+| California | [CalVet](https://www.calvet.ca.gov) |
+| Colorado | [Colorado Division of Veterans Affairs](https://www.colorado.gov) |
+| Connecticut | [Connecticut Department of Veterans Affairs](https://portal.ct.gov) |
+| Delaware | [Delaware Commission of Veterans Affairs](https://veteransaffairs.delaware.gov) |
+| Florida | [Florida Department of Veterans’ Affairs](https://www.floridavets.org) |
+| Georgia | [Georgia Department of Veterans Service](https://veterans.georgia.gov) |
+| Hawaii | [Hawaii Office of Veterans’ Services](https://dod.hawaii.gov) |
+| Idaho | [Idaho Division of Veterans Services](https://www.veterans.idaho.gov) |
+| Illinois | [Illinois Department of Veterans’ Affairs](https://veterans.illinois.gov) |
+| Indiana | [Indiana Department of Veterans Affairs](https://www.in.gov) |
+| Iowa | [Iowa Department of Veterans Affairs](https://va.iowa.gov) |
+| Kansas | [Kansas Commission on Veterans Affairs Office](https://kcva.ks.gov) |
+| Kentucky | [Kentucky Department of Veterans Affairs](https://veterans.ky.gov) |
+| Louisiana | [Louisiana Department of Veterans Affairs](https://www.vetaffairs.la.gov) |
+| Maine | [Maine Bureau of Veterans’ Services](https://www.maine.gov) |
+| Maryland | [Maryland Department of Veterans & Military Families](https://veterans.maryland.gov) |
+| Massachusetts | [Massachusetts Veterans Services](https://www.mass.gov) |
+| Michigan | [Michigan Veterans Affairs Agency](https://www.michigan.gov) |
+| Minnesota | [Minnesota Department of Veterans Affairs](https://mn.gov) |
+| Mississippi | [Mississippi State Veterans Affairs Board](https://www.msva.ms.gov) |
+| Missouri | [Missouri Veterans Commission](https://mvc.dps.mo.gov) |
+| Montana | [Montana Veterans Affairs Division](https://dma.mt.gov) |
+| Nebraska | [Nebraska Department of Veterans’ Affairs](https://veterans.nebraska.gov) |
+| Nevada | [Nevada Department of Veterans Services](https://veterans.nv.gov) |
+| New Hampshire | [New Hampshire Department of Military Affairs and Veterans Services](https://www.dmavs.nh.gov) |
+| New Jersey | [New Jersey Department of Military and Veterans Affairs](https://www.nj.gov) |
+| New Mexico | [New Mexico Department of Veterans’ Services](https://www.nmdvs.org) |
+| New York | [New York State Department of Veterans’ Services](https://veterans.ny.gov) |
+| North Carolina | [North Carolina Department of Military and Veterans Affairs](https://www.milvets.nc.gov) |
+| North Dakota | [North Dakota Department of Veterans Affairs](https://www.nd.gov) |
+| Ohio | [Ohio Department of Veterans Services](https://dvs.ohio.gov) |
+| Oklahoma | [Oklahoma Department of Veterans Affairs](https://oklahoma.gov) |
+| Oregon | [Oregon Department of Veterans’ Affairs](https://www.oregon.gov) |
+| Pennsylvania | [Pennsylvania Department of Military and Veterans Affairs](https://www.dmva.pa.gov) |
+| Rhode Island | [Rhode Island Office of Veterans Services](https://www.vets.ri.gov) |
+| South Carolina | [South Carolina Department of Veterans’ Affairs](https://scdva.sc.gov) |
+| South Dakota | [South Dakota Department of Veterans Affairs](https://vetaffairs.sd.gov) |
+| Tennessee | [Tennessee Department of Veterans Services](https://www.tn.gov) |
+| Texas | [Texas Veterans Commission](https://www.tvc.texas.gov) |
+| Utah | [Utah Department of Veterans and Military Affairs](https://veterans.utah.gov) |
+| Vermont | [Vermont Office of Veterans Affairs](https://veterans.vermont.gov) |
+| Virginia | [Virginia Department of Veterans Services](https://www.dvs.virginia.gov) |
+| Washington | [Washington State Department of Veterans Affairs](https://www.dva.wa.gov) |
+| West Virginia | [West Virginia Department of Veterans Assistance](https://veterans.wv.gov) |
+| Wisconsin | [Wisconsin Department of Veterans Affairs](https://dva.wi.gov) |
+| Wyoming | [Wyoming Veterans Commission](https://www.wyomilitary.wyo.gov) |
+| District of Columbia | [DC Veterans Affairs](https://communityaffairs.dc.gov) |
 
-Enrollment decision
+If you are dealing with county-level benefit questions, look for a **county veterans service office** as well. For example, Los Angeles County operates a dedicated **Military and Veterans Affairs** office that helps people navigate claims, benefits, and support services. Many large counties run similar offices. citeturn17view0turn24search4
 
-Certificate or award processing
+### Major nonprofit resources
 
-Eligibility review
+Nonprofits are often most useful not because they replace VA, but because they help you **navigate** VA, avoid missing evidence, find housing or employment help, and locate local service officers.
 
-Agree with decision?
+| Organization | What it is useful for |
+|---|---|
+| [DAV](https://www.dav.org/get-help-now/va-benefits-help/) | Free VA claims and appeals help, transportation, employment and transition support. DAV says it helps more than a million Veterans each year. citeturn18search0turn18search19 |
+| [VFW](https://www.vfw.org) | Service officers who help file VA claims and connect Veterans to support. citeturn18search1 |
+| [The American Legion](https://www.legion.org/member-services/veterans-services/veterans-benefits/find-a-veteran-service-officer) | Accredited service officers, state benefit directories, and benefits guidance. citeturn18search2turn18search6 |
+| [Wounded Warrior Project](https://www.woundedwarriorproject.org/programs/benefits-services) | VA-accredited benefits assistance, mental health, peer/community, and caregiver-related support for post-9/11 wounded/injured/ill Veterans. citeturn18search3turn18search7 |
+| [U.S.VETS](https://usvets.org/) | Housing, counseling, and employment support with multiple physical locations. citeturn24search2 |
+| [National Resource Directory](https://www.nationalresourcedirectory.gov/) | Federal-backed resource locator for benefits, services, and referrals. citeturn17view0 |
 
-Use and manage benefit
+The safest rule is simple: if someone wants a cut of your retroactive benefits or claims they can guarantee a 100% rating, walk away and use VA’s accredited-representative search instead. citeturn19search9turn19search5
 
-Higher-Level Review VA Form 20-0996
+## Recent changes, source verification, and resources
 
-Supplemental Claim VA Form 20-0995
+### Recent policy changes and effective dates
 
-Board Appeal VA Form 10182
-
-
-
-Show code
-State Benefits
-State Index
-Alabama
-Alaska
-Arizona
-...
-Wisconsin
-Wyoming
-District of Columbia
-Comparison Tables
-State	Tuition / fee relief	Property tax relief	Vehicle / plate benefits	Parks / recreation	State veterans homes / cemeteries	Dependent-specific benefit
-Texas	Yes	Verify in state file	Yes	Verify in state file	Yes	Yes
-Oklahoma	Verify in state file	Yes	Yes	Yes	Verify in state file	Yes
-Virginia	Yes	Yes	Yes	Yes	Yes	Yes
-Washington	Yes	Verify in state file	Yes	Yes	Yes	Yes
-
-Sample State Section Template
-Texas
-Official agency: Texas Veterans Commission
-Best entry point: State education and veteran benefits portal
-Who this page is for: Texas veterans, spouses, dependents, survivors, and school certifying officials
-
-Education
-Hazlewood Act
-Up to 150 credit hours of tuition exemption at Texas public institutions for qualifying veterans
-Can also apply to certain spouses and dependent children
-Important: school-specific deadlines apply
-If verification paperwork is delayed, ask the school about the 60-day deferment option
-Federal claims help
-Veterans can work with accredited representatives and state service officers for federal claims assistance.
-Documents to gather
-DD214
-Certificate of Eligibility or ineligibility for federal education benefits
-State residency proof if required
-School admission or enrollment records
-Application path
-Apply to a Texas public institution
-Gather DD214 and federal education eligibility letter
-Complete the Hazlewood application
-Submit the packet to the school financial aid office
-Notes
-Do not assume one school’s deadline applies statewide.
-Check whether Chapter 33 or Chapter 31 usage affects the practical value of Hazlewood in your term.
-Templates and Checklists
-Sample decision review cover letter
-text
-Copy
-[Your Name]
-[Address]
-[Phone]
-[Email]
-[Date]
-
-Department of Veterans Affairs
-[Benefit Office Address]
-
-RE: Request for Decision Review
-Benefit Type: [Compensation / Pension / Health Care / Other]
-Decision Date: [YYYY-MM-DD]
-VA File Number / Claim Number: [Number]
-
-I respectfully request review of the VA decision dated [date].
-
-Issue(s) for review:
-1. [Issue]
-2. [Issue]
-
-Why review is requested:
-- [Factual error]
-- [Legal or policy error]
-- [New and relevant evidence, if filing a Supplemental Claim]
-
-Attached:
-- [Medical opinion]
-- [Lay statement]
-- [Service records]
-- [Dependency records]
-- [Other]
-
-I certify that the information provided is true and correct to the best of my knowledge.
-
-Signature:
-[Your Name]
-Sample claim packet checklist
-text
-Copy
-GENERAL CLAIM CHECKLIST
-[ ] DD214 or other separation papers
-[ ] Government ID
-[ ] Current mailing address
-[ ] Direct deposit information
-[ ] Marriage certificate / divorce decrees if applicable
-[ ] Birth certificates or dependent school records if applicable
-[ ] Current VA rating decision letters
-[ ] Medical diagnosis records
-[ ] Nexus opinion or service treatment evidence
-[ ] Buddy / lay statements
-[ ] Proof of state residency for state-specific benefits
-[ ] Death certificate if survivor claim
-[ ] Tax assessor or school forms if state program requires them
-Maintenance Notes
-Verify federal rates after each annual VA rate update.
-Verify GI Bill rates each academic-rate year.
-Review each state page after legislative sessions or when the state veterans agency updates its benefits guide.
-Add a Last Verified line to every state page.
-Keep a changelog for laws, rate changes, and broken links.
-Sources
-Official VA.gov benefit pages
-Official state veterans affairs pages
-State tax and education agency pages
-Federal statutes, regulations, and agency guidance
-Reputable nonprofit references only when primary sources are unavailable
-sql
-Copy
-
-The federal forms, review lanes, rating thresholds, and chart values in that sample are grounded in current official VA pages for disability compensation, health care, education, CHAMPVA, pension, home loans, and decision reviews. citeturn24view0turn30search1turn8search3turn8search0turn8search4turn18search1turn18search4turn11view0
-
-For the state side, the sample Texas section is grounded in the Texas Veterans Commission’s Hazlewood page, which confirms the **150-hour** exemption, spouse/dependent pathways, school-specific timing, and the availability of a **60-day deferment** when paperwork is delayed. citeturn21search0
-
-## Maintenance and verification rules
-
-A public GitHub repository on benefits lives or dies on **update discipline**. The main federal refresh points are predictable. VA’s disability compensation and SMC rate tables are tied to annual COLA changes and are currently published as **2026 rates effective December 1, 2025**. VA’s clothing allowance page currently states an **August 1, 2026** application deadline for the 2026 year. Post-9/11 GI Bill rates run on an **August 1, 2025 to July 31, 2026** schedule, while DEA Chapter 35 rates run on an **October 1, 2025 to September 30, 2026** schedule. citeturn24view0turn23search1turn7search0turn7search1
-
-Your appeals section also needs date discipline. VA’s current review system makes the time limits explicit: a **Higher-Level Review** generally must be requested within **1 year** of the initial or supplemental decision; a **Board Appeal** is generally due within **1 year**, while certain contested claims use **60 days**. Those deadlines should be repeated in the README and tagged in every form template. citeturn11view0turn9search8
-
-For state content, the right maintenance rule is **“verify after legislative session, annual guide release, or agency-page change”** rather than a generic monthly sweep. Florida’s 2026 annual guide is a good model for release-based state updates; Virginia’s tax pages show why year-specific legal updates matter, including a 2025 line-of-duty terminology update and tax subtraction amounts keyed to specific tax years; Oklahoma’s benefits page includes state program details like an **October 1** application timing note for certain special plates. citeturn20search8turn20search10turn27view1turn27view4turn29view0
-
-The safest repo governance pattern is therefore:
-
-| Maintenance task | Minimum cadence | Why |
+| Change | Effective date / status | Why it matters |
 |---|---|---|
-| Federal compensation, SMC, and special allowances | Annual, after VA rate publication | Rates and annual deadlines change | 
-| GI Bill and DEA rates | At each official rate-year reset | Education rates follow separate calendars |
-| Appeals forms and instructions | Quarterly or when VA updates form pages | Procedural pages change and forms are revised |
-| State benefit pages | After each state legislative session or guide release | State thresholds and tax rules are the most volatile |
-| Source validation | Continuous via “Last verified” metadata | Public repos need visible freshness controls |
+| **Current 2026 disability compensation rates** | Effective **December 1, 2025** | These are the live rates in effect on June 28, 2026. citeturn10view0 |
+| **PACT Act health care expansion accelerated** | Health care expansion started **March 5, 2024** | Expanded access to care and toxic exposure benefits earlier than initially scheduled. citeturn12search0 |
+| **Rudisill / Perkins GI Bill implementation** | Ongoing in **2026** | Some Veterans may get up to **48 months** of education entitlement; VA is automating more reviews. citeturn14search8turn14search0turn14search4 |
+| **Claim Assist Portal launched** | **March 4, 2026** | Gives claimants a faster way to respond when VA needs additional information. citeturn19search17 |
+| **Current average disability claim time** | **69.8 days** in **May 2026** | Useful benchmark for planning, though individual claims vary. citeturn20search0 |
+| **PCAFC COVID-era home-visit flex removed** | Federal Register notice published **February 13, 2026** | Confirms a temporary pandemic-specific regulation is no longer in force. citeturn13search5 |
+| **PCAFC legacy transition extended** | Legacy transition currently shown through **September 30, 2028** | Important for existing caregiver participants and applicants. citeturn34view0turn13search9 |
+| **Chapter 35 secondary-school payments ended for new programs** | Programs starting on or after **August 1, 2026** | Important for dependents using DEA for secondary education/GED-type programs. citeturn37search6turn37search7 |
+| **Character-of-discharge rule change implemented** | **October 1, 2024** | Expanded the ability of some former service members to qualify for benefits despite discharge barriers. citeturn33search13 |
+| **Pension 2026 rate year** | Effective **December 1, 2025**; net worth limit **$163,699** through **November 30, 2026** | Important for wartime Veterans evaluating needs-based pension eligibility. citeturn39view0 |
 
-Those maintenance rules are not just editorial preferences. They are the practical response to how these programs are actually published and updated by VA and the states. citeturn24view0turn23search1turn7search0turn7search1turn10search2turn10search8turn20search8turn27view1
+One caution: some 2026 Federal Register items are **proposed rules** or **administrative notices**, not final benefit law. This guide labels them as such when relevant and leans on the current VA.gov consumer-facing page where available. citeturn13search0turn13search6turn13search13
 
-The bottom line is that the strongest version of this project is a **source-driven, modular, annualized benefits atlas**: rooted in official VA and state agency pages, organized by federal tiers and repeated state templates, and designed so that California and later San Diego variants can be forked cleanly from the same structure without rewriting the national logic. That approach matches both the gaps in the current reference repository and the way official benefits information is actually administered across federal and state systems. citeturn2view0turn17view0turn3search1
+### Verification of sources
+
+This guide prioritizes source reliability in the following order:
+
+1. **VA.gov / benefits.va.gov / VA caregiver sites / VA public health**
+2. **eCFR / federal statutes / Federal Register**
+3. **Other federal agencies with direct subject-matter authority** such as **SSA**, **DFAS**, **OPM**, and **DOL**
+4. **Official state veterans affairs portals**
+5. **Major nonprofits** only for navigation and support services, not for legal standards or payment amounts. citeturn16search1turn31search2turn13search0turn6search0turn36view0turn7search6turn25search1turn17view0turn18search0
+
+Where a topic changes frequently, this guide uses the most current official page available on the date above. Where rules vary by state or by individual facts, that uncertainty is flagged directly rather than papered over. citeturn17view0turn39view0turn20search0
+
+### Prioritized resources and links
+
+### Official federal benefits hubs
+
+- [VA.gov main benefits portal](https://www.va.gov/)
+- [VA disability compensation](https://www.va.gov/disability/)
+- [Current 2026 disability compensation rates](https://www.va.gov/disability/compensation-rates/veteran-rates/)
+- [VA decision reviews and appeals](https://www.va.gov/decision-reviews/)
+- [VA health care](https://www.va.gov/health-care/)
+- [VA health care application 10-10EZ](https://www.va.gov/forms/10-10ez/)
+- [VA pension](https://www.va.gov/pension/)
+- [Current Veterans Pension rates](https://www.va.gov/pension/veterans-pension-rates/)
+- [GI Bill and education benefits](https://www.va.gov/education/)
+- [GI Bill eligibility](https://www.va.gov/education/eligibility/)
+- [Post-9/11 GI Bill rates](https://www.va.gov/education/benefit-rates/post-9-11-gi-bill-rates/)
+- [VA home loans](https://www.va.gov/housing-assistance/home-loans/)
+- [VA Form 26-1880 COE](https://www.va.gov/forms/26-1880/)
+- [Adapted housing grants](https://www.va.gov/housing-assistance/disability-housing-grants/)
+- [VA burial and memorial benefits](https://www.va.gov/burials-memorials/)
+- [Burial allowance](https://www.va.gov/burials-memorials/veterans-burial-allowance/)
+- [Get help from a VA-accredited representative](https://www.va.gov/get-help-from-accredited-representative/)
+- [OGC accreditation search](https://www.va.gov/ogc/apps/accreditation/)
+- [PACT Act and toxic exposure benefits](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/)
+- [Presumptive service connection fact sheet PDF](https://www.va.gov/files/2026-03/presumptive-service-connection-information_0.pdf)
+
+### Key forms
+
+- [VA Form 21-526EZ](https://www.va.gov/forms/21-526ez/)
+- [VA Form 21-0966](https://www.va.gov/forms/21-0966/)
+- [VA Form 21-10210](https://www.va.gov/forms/21-10210/)
+- [VA Form 21-0781](https://www.va.gov/forms/21-0781/)
+- [VA Form 21-8940](https://www.va.gov/forms/21-8940/)
+- [VA Form 21-686c](https://www.va.gov/forms/21-686c/)
+- [VA Form 21-674](https://www.va.gov/forms/21-674/)
+- [VA Form 21P-527EZ](https://www.va.gov/forms/21p-527ez/)
+- [VA Form 22-1990](https://www.va.gov/forms/22-1990/)
+- [VA Form 22-5490](https://www.va.gov/forms/22-5490/)
+- [VA Form 10-10CG](https://www.va.gov/family-and-caregiver-benefits/caregiver-assistance/apply-form-10-10cg/introduction)
+- [VA Form 10-10d](https://www.va.gov/forms/10-10d/)
+- [VA Form 21P-530EZ](https://www.va.gov/forms/21p-530ez/)
+- [VA Form 40-10007](https://www.va.gov/forms/40-10007/)
+
+### Other official federal agencies
+
+- [SSA Veterans page](https://www.ssa.gov/people/veterans/)
+- [SSA wounded warriors benefits](https://www.ssa.gov/pubs/EN-05-10030.pdf)
+- [OPM veterans hiring authorities](https://www.opm.gov/fedshirevets/hiring-officials/strategic-recruitment-and-hiring/veterans/)
+- [USAJOBS veterans hiring path](https://help.usajobs.gov/working-in-government/unique-hiring-paths/veterans)
+- [DOL VETS](https://www.dol.gov/agencies/vets)
+- [DFAS concurrent retirement and disability](https://www.dfas.mil/retiredmilitary/disability/crdp/)
+
+### State and nonprofit directories
+
+- [NASDVA state veterans affairs directory](https://nasdva.us/resources/)
+- [National Resource Directory](https://www.nationalresourcedirectory.gov/)
+- [DAV](https://www.dav.org/get-help-now/va-benefits-help/)
+- [VFW](https://www.vfw.org/)
+- [The American Legion service officer finder](https://www.legion.org/member-services/veterans-services/veterans-benefits/find-a-veteran-service-officer)
+- [Wounded Warrior Project benefits services](https://www.woundedwarriorproject.org/programs/benefits-services)
+- [U.S.VETS](https://usvets.org/)
+
+### Open questions and limitations
+
+State and local benefits are the biggest area where a fully “exhaustive” national guide runs into frequent change. This document therefore provides a **state-by-state official portal directory** and a summary of the major recurring state benefit categories, but it does **not** claim that every state definitely offers each category. Specific property-tax exemptions, tuition waivers, veterans-home admission rules, plates/registration programs, and county emergency-assistance programs vary substantially and should always be verified on the official state or county portal before acting. citeturn17view0
+
+A few 2025–2026 items, especially some caregiver and VR&E matters, appear in the **Federal Register** as proposals or administrative notices rather than final codified benefit rules. Where that is the case, this guide treats them as updates to watch, not as final law unless VA’s live public-facing benefit page reflects the change. citeturn13search0turn13search6turn13search13
+
+Finally, individual outcomes depend on facts that no general guide can fully resolve: discharge characterization, exact service dates, qualifying exposure locations, severity of symptoms, dependency status, income/net worth, retired-pay status, and whether VA deems a total rating **permanent**. The best practice for any non-routine case is to combine this guide with your own records and a **VA-accredited representative**. citeturn19search1turn19search5
